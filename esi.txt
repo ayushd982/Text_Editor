@@ -1,0 +1,79 @@
+// import React, { useState } from 'react'
+
+// function Register(props) {
+//     const [name , setname] = useState('');
+//     const [email , setemail] = useState('');
+//     const [password , setpassword] = useState('');
+
+//     const handleSubmit = (e) =>{
+//         e.preventDefault();
+//         console.log(name , email ,password)
+//     }
+//     fetch("http://localhost:5000/register" ,{
+//         method : "post",
+//         crossDomain : true,
+//         headers :{
+//             "Content-Type" :"application/json",
+//             Accept: "application/json",
+//             "Access-Control-Allow-origin" :"*",
+//         },
+//         body :JSON.stringify({
+//             name,
+//             email,
+//             password
+//         }),
+//     }) 
+//     .then((res) => res.json())
+//     .then((data) =>{
+//         console.log(data ,"userRegister")
+//     })
+//   return (
+//     <div className='container'>
+//       <form className="reister-form" onSubmit={handleSubmit}>
+//         <label htmlFor = "name">Full Name</label>
+//         <input value = {name} onChange={(e)=>setname(e.target.value)} placeholder="Enter Your Full Name"></input>
+        
+//         <label htmlFor = "email">Email</label>
+//         <input value = {email} onChange={(e)=>setemail(e.target.value)} type={email} placeholder="yourmail@gmail.com"></input>
+
+//         <label htmlFor = "name">Password</label>
+//         <input value = {password} onChange={(e)=>setpassword(e.target.value)} type={password} placeholder="*******"></input>
+
+//         <button type="submit">Create Account</button>
+//       </form>
+//       <button className="btn-link" onClick={(e)=>props.onFormSwitch('Login')}>Already have an account ? Login </button>
+//     </div>
+//   )
+// }
+ 
+// export default Register
+
+//Login
+
+// import React, { useState } from 'react'
+
+// function Login(props) {
+//     const[email ,setemail] = useState('');
+//     const[password ,setpassword] = useState('');
+
+//     const handleSubmit = (e) =>{
+//         e.preventDefault()
+//         console.log(email , password);
+//     }
+//   return (
+//     <div className='container'>     
+//     <form className='login-form' onSubmit={handleSubmit}>
+//         <label type = "email">Email Id</label>
+//         <input value ={email} onChange= {(e)=> setemail(e.target.value)} type={email} placeholder="yourmail@gmail.com"></input>
+
+//         <label type = "password">Password</label>
+//         <input value ={password} onChange= {(e)=> setpassword(e.target.value)} type={password} placeholder="Enter password"></input>
+
+//         <button type="submit">Log in</button>
+//     </form>  
+//     <button className="btn-link" onClick={(e)=>{props.onFormSwitch('register')}}>Don't have an account ? register</button>
+//     </div>
+//   )
+// }
+
+// export default Login
